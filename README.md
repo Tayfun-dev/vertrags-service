@@ -54,9 +54,12 @@ docker build -t vertrags-service .
 docker run -p 8080:8080 vertrags-service
 ```
 ### API-Endpunkte
-Methode	     Endpunkt	      Beschreibung
-GET	         /contracts	    Liste aller Verträge
-POST	       /contracts   	Neuen Vertrag erstellen
+
+GET /contracts: Dieser Endpunkt gibt eine Liste aller vorhandenen Verträge zurück. Du kannst ihn verwenden, um alle Verträge in der Datenbank abzurufen.
+
+POST /contracts: Mit diesem Endpunkt kannst du einen neuen Vertrag erstellen, indem du die Vertragsdetails im Anfrage-Body übermittelst.
+
+
 
 
 
