@@ -22,3 +22,44 @@ Ein Mikroservice, um Verträge zu managen, gebaut mit **Java** und **Spring Boot
 ```bash
 git clone https://github.com/Tayfun-dev/vertrags-service.git
 cd vertrags-service
+```
+### 2. Abhängigkeiten installieren
+```bash
+mvn clean install
+```
+### 3. Datenbank konfigurieren
+Bearbeite die Datei src/main/resources/application.properties und füge deine Datenbankzugangsdaten hinzu:
+```properties
+spring.datasource.url=jdbc:postgresql://localhost:5432/vertragsdb
+spring.datasource.username=your_database_username
+spring.datasource.password=your_database_password
+```
+### 4. Anwendung starten
+```bash
+mvn spring-boot:run
+```
+### 5. API testen
+Nach dem Start der Anwendung ist die API unter http://localhost:8080 verfügbar.
+Beispielendpunkt:
+```HTTP
+GET /contracts
+```
+### Docker-Unterstützung
+1. Docker-Image erstellen
+```bash
+docker build -t vertrags-service .
+```
+2. Container starten
+```bash
+docker run -p 8080:8080 vertrags-service
+```
+### API-Endpunkte
+Methode	     Endpunkt	      Beschreibung
+GET	         /contracts	    Liste aller Verträge
+POST	       /contracts   	Neuen Vertrag erstellen
+
+
+
+
+
+
